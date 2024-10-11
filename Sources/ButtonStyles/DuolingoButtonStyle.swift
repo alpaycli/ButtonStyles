@@ -10,28 +10,25 @@ import SwiftUI
 public struct DuolingoButtonStyle: ButtonStyle {
     
     @Environment(\.isEnabled) var isEnabled
+    private var yOffset: CGFloat = 6
     
     private var shadowColor: Color
     private var backgroundColor: Color
     
-    private var yOffset: CGFloat = 6
-    
-    init(
-        backgroundColor: Color
-    ) {
+    init(backgroundColor: Color) {
         if #available(iOS 18.0, *) {
-            self.shadowColor = .black.mix(with: backgroundColor, by: 0.9)
+            self.shadowColor = .black.mix(with: backgroundColor, by: 0.9, in: .perceptual)
         } else {
-            self.shadowColor = .black.opacity(0.6)
+            self.shadowColor = .black.mix(with: backgroundColor, by: 0.9)
         }
         self.backgroundColor = backgroundColor
     }
     
     init() {
         if #available(iOS 18.0, *) {
-            self.shadowColor = .black.mix(with: .green, by: 0.9)
+            self.shadowColor = .black.mix(with: .green, by: 0.9, in: .perceptual)
         } else {
-            self.shadowColor = .black.opacity(0.6)
+            self.shadowColor = .black.mix(with: .green, by: 0.9)
         }
         self.backgroundColor = .green
     }
@@ -40,9 +37,9 @@ public struct DuolingoButtonStyle: ButtonStyle {
         ZStack {
             if isEnabled {
                 if #available(iOS 18.0, *) {
-                    buttonShape(color: configuration.role == .destructive ? .black.mix(with: .red, by: 0.9) : shadowColor)
+                    buttonShape(color: configuration.role == .destructive ? .black.mix(with: .red, by: 0.9, in: .perceptual) : shadowColor)
                 } else {
-                    buttonShape(color: configuration.role == .destructive ? .black.opacity(0.6) : shadowColor)
+                    buttonShape(color: configuration.role == .destructive ? .black.mix(with: .red, by: 0.9) : shadowColor)
                 }
             }
             buttonShape(color: isEnabled ? configuration.role == .destructive ? .red : backgroundColor : .gray.opacity(0.4))
