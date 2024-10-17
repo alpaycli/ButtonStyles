@@ -65,7 +65,7 @@ public struct DuolingoButtonStyle: ButtonStyle {
 }
 
 public extension ButtonStyle where Self == DuolingoButtonStyle {
-    static func duolingo(color: Color) -> DuolingoButtonStyle {
+    static func duolingo(color: Color = .green) -> DuolingoButtonStyle {
         DuolingoButtonStyle(backgroundColor: color)
     }
 }
