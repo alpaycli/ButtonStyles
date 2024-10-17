@@ -2,7 +2,7 @@
 
 ButtonStyles is a simple, reusable Swift package for creating custom button styles using SwiftUI. Currently, it includes the DuolingoButtonStyle, a 3D button style similar to used in Duolingo app.
 
-![](https://github.com/alpaycli/ButtonStyles/blob/main/DuolingoStylePrev.gif)
+![](https://github.com/alpaycli/ButtonStyles/blob/main/DuolingoStylePrev.mov)
 
 ## Features
 
