@@ -53,7 +53,7 @@ Button("Tap Me") {}
     .foregroundStyle(.white)
 ```
 
-![](https://github.com/alpaycli/ButtonStyles/blob/main/DuolingoStyleStatesPrev.gif)
+![](https://github.com/alpaycli/ButtonStyles/blob/main/DuolingoStyleStatesPrev.mov)
 
 ## License
 
