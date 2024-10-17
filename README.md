@@ -26,6 +26,7 @@ ButtonStyles is a simple, reusable Swift package for creating custom button styl
 
 ### Basic Usage
 ```Swift
+import ButtonStyles
 import SwiftUI
 
 Button("Tap Me") {}
@@ -37,20 +38,23 @@ Button("Tap Me") {}
 ### Different states
 
 ```Swift
-    VStack(spacing: 20) {
-        Button("Tap Me") {}
-            .buttonStyle(.duolingo(color: .green))
-        
-        Button("Tap Me", role: .destructive) {}
-            .buttonStyle(.duolingo(color: .green))
-        
-        Button("Tap Me", role: .destructive) {}
-            .buttonStyle(.duolingo(color: .green))
-            .disabled(true)
-        
-    }
-    .padding()
-    .foregroundStyle(.white)
+import ButtonStyles
+import SwiftUI
+
+VStack(spacing: 20) {
+    Button("Tap Me") {}
+        .buttonStyle(.duolingo(color: .green))
+    
+    Button("Tap Me", role: .destructive) {}
+        .buttonStyle(.duolingo(color: .green))
+    
+    Button("Tap Me", role: .destructive) {}
+        .buttonStyle(.duolingo(color: .green))
+        .disabled(true)
+    
+}
+.padding()
+.foregroundStyle(.white)
 ```
 
 ![](https://github.com/alpaycli/ButtonStyles/blob/main/DuolingoStyleStatesPrev.mov)
